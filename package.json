@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "sass": "sass assets/scss/theme.scss:assets/css/theme2.css"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "sass": "^1.55.0"
+    }
+}

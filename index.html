@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Processamento de Linguagem Natural em Textos de Mídias Sociais: Fundamentos, Ferramentas e Aplicações</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>  
+    <link href="favicon.ico" rel="shortcut icon"> 
+    
+    <!-- Google Font -->
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+	
+    
+    <!-- FontAwesome JS-->
+    <script src="assets/fontawesome/js/all.min.js" defer></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" href="assets/css/theme2.css" rel="stylesheet">
+
+</head> 
+
+
+<body>    
+    <header class="header">	    
+        <div class="branding">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper">
+	                <div class="site-logo">
+						<a class="navbar-brand" href="#">
+							<img class="logo-icon me-2" src="assets/images/logo.png" alt="NLP logo">
+						</a>
+						<span class="logo-text">&nbsp;</span>
+					</div>    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	    <div class="container">
+		    <div class="row">
+				
+			    <div class="col-12 col-md-5 align-self-center">
+				    <div class="book-cover-holder">
+					    <img class="img-fluid book-cover" src="assets/images/book-mockup.png" alt="Capa do livro de NLP">
+						<!--
+					    <div class="book-badge d-inline-block shadow">
+						    Jupyter Notebook <br>incluso
+					    </div>
+						-->
+				    </div><!--//book-cover-holder-->
+					<!--
+				    <div class="text-center"><a class="theme-link scrollto" href="#reviews-section">See all book reviews</a></div>
+					-->
+			    </div><!--col-->
+			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+				    <div class="promo pe-md-3 pe-lg-5">
+					    <h1 class="headline mb-3">
+							Processamento de Linguagem Natural em Textos de Mídias Sociais
+					    </h1><!--//headline-->
+					    <div class="subheadline mb-4">
+							Aprenda técnicas modernas de NLP para analisar dados de mídias sociais em larga escala, incluindo
+							extração de dados, pré-processamento, representação vetorial de textos (<i>embeddings</i>), 
+							modelos para extração de conhecimento, compreensão semântica e emocional, e suas aplicações em projetos reais. 
+						</div><!--//subheading-->
+					    
+					    <div class="cta-holder row gx-md-3 gy-3 gy-md-0">
+						    <div class="col-12 col-md-auto">
+						        <a class="btn btn-primary w-100" href="#">Baixar o PDF</a>
+						    </div>
+						    <div class="col-12 col-md-auto">
+						        <a class="btn btn-secondary scrollto w-100" href="#">Jupyter Notebook</a>
+						    </div>
+					    </div><!--//cta-holder-->
+					    
+					    <div class="hero-quotes mt-5">
+						    <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-bs-interval="8000" data-bs-ride="carousel">
+								<ol class="carousel-indicators">
+									<li class="active" data-bs-slide-to="0" data-bs-target="#quotes-carousel"></li>
+									<li data-bs-slide-to="1" data-bs-target="#quotes-carousel"></li>
+									<li data-bs-slide-to="2" data-bs-target="#quotes-carousel"></li>
+								</ol>
+							  
+							    <div class="carousel-inner">
+									<div class="carousel-item">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Highly recommended consectetur adipiscing elit. Proin et auctor dolor, sed venenatis 
+											massa. Vestibulum ullamcorper lobortis nisi non placerat praesent mauris neque"     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile rounded-circle" src="assets/images/profiles/frances.png" alt="Frances A. Santos">
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">Frances A. Santos</div>
+										        <div class="soure-title">Co-Autor, Unicamp</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+
+								    <div class="carousel-item active">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Textos de mídias sociais são fontes fundamentais para compreender
+											em larga escala o comportamento humano em sociedades contemporâneas."     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile rounded-circle" src="assets/images/profiles/jordan.jpeg" alt="Jordan Kobellarz">
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">Jordan Kobellarz</div>
+										        <div class="soure-title">Co-Autor, UTPFR</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    
+								    <div class="carousel-item">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Awesome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+											euismod nunc porta urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae."     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile rounded-circle" src="assets/images/profiles/fabio.jpeg" alt="Fábio R. de Souza">
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">Fábio R. de Souza</div>
+										        <div class="soure-title">Co-autor, USP</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								</div><!--//carousel-inner-->
+							</div><!--//quotes-carousel-->
+							
+					    </div><!--//hero-quotes-->
+				    </div><!--//promo-->
+			    </div><!--col-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//hero-section-->
+    
+	<svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(246, 241, 234, 1)" offset="0%"></stop><stop stop-color="rgba(246, 241, 234, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L480,10L960,80L1440,0L1920,40L2400,10L2880,0L3360,0L3840,70L4320,80L4800,40L5280,60L5760,80L6240,90L6720,60L7200,0L7680,60L8160,90L8640,50L9120,20L9600,20L10080,0L10560,80L11040,10L11520,10L11520,100L11040,100L10560,100L10080,100L9600,100L9120,100L8640,100L8160,100L7680,100L7200,100L6720,100L6240,100L5760,100L5280,100L4800,100L4320,100L3840,100L3360,100L2880,100L2400,100L1920,100L1440,100L960,100L480,100L0,100Z"></path></svg>
+	<section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5">
+	    <div class="container py-5">
+		    <h2 class="section-heading text-center mb-3">O que você irá aprender com esse material? </h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+				Conheça os fundamentos teóricos de NLP aplicados aos desafios científicos 
+				e tecnológicos de lidar com textos gerados por usuários de mídias sociais.
+			</div>
+		    <div class="row text-center">
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-user-group"></i></div>
+						    <h3 class="item-heading">1. Textos de mídias sociais: suas principais características e como coletá-los</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+							As principais características de textos compartilhados por usuários em famosas mídias 
+							sociais, como coletá-los, assim como metainformações e respectivos desafios e limitações 
+							que cada uma dessas fontes de dados apresenta.
+						</div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa fa-cogs"></i></div>
+						    <h3 class="item-heading">2. Pré-processamento Textual</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Diversas técnicas para preparar os dados textuais, antes deles serem efetivamente utilizados 
+							por algum modelo de linguagem.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa fa-exchange"></i></div>
+						    <h3 class="item-heading">3. Representação de Textos Utilizando Vetores Numéricos</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Representações de textos utilizando vetores numéricos, chamados embeddings, capazes de 
+							capturar regularidades sintáticas e semânticas presentes nos textos.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa fa-filter"></i></div>
+						    <h3 class="item-heading">4. Modelagem e Extração de Conhecimento</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Diferentes métodos de modelagem e extração de conhecimento, incluindo técnicas de agrupamento de 
+							textos (clusterização), bem como a modelagem de estruturas semânticas latentes no texto, conhecida 
+							como extração de tópicos.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-face-smile"></i> &nbsp; <i class="fa fa-face-sad-tear"></i></div>
+						    <h3 class="item-heading">5. Compreensão Semântica e Emocional</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Os conceitos de compreensão semântica e emocional, que abragem as tarefas de detecção de intenções, 
+							reconhecimento de entidades nomeadas, análises de sentimentos e emoções, ressaltando os desafios 
+							inerentes a elas.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fa-sharp fa-solid fa-wand-magic-sparkles"></i></div>
+						    <h3 class="item-heading">6. Possíveis Aplicações</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    Aplicações reais, tais como a recomendação de rotas personalizadas para cidades inteligentes e o caso 
+							de uso na análise de situações politicamente polarizadas, que podem ser desenvolvidas com base no 
+							conhecimento semântico extraído a partir de dados de mídias sociais, considerando a utilização de 
+							diferentes técnicas apresentadas no minicurso.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+	<!--
+	<section id="audience-section" class="audience-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-4">Para quem é esse material?</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+			    List your target readers in this section and back up with reviews. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie. Vivamus hendrerit nisi condimentum erat tempus, vitae accumsan odio euismod.
+		    </div>
+		    <div class="audience mx-auto">
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Software Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div>
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">App Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div>
+			    </div>	
+		    </div>
+	    </div>
+    </section>
+	-->
+
+    <section id="reviews-section" class="reviews-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-5">Autores</h2>
+		    <div class="row justify-content-center">
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+				        <div class="source row gx-md-3 gy-3 gy-md-0">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile rounded-circle" src="assets/images/profiles/frances.png" alt="Frances">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Frances A. Santos, M.Sc</div>
+						        <div class="soure-title">Aluno de doutorado, Unicamp</div>
+								
+								<ul class="my-1 mx-0 px-0">
+									<li class="list-inline-item"><a class="p-1" href="https://www.linkedin.com/in/francesalbertsantos/"><i class="fab fa-linkedin-in"></i></a></li> 
+									<li class="list-inline-item"><a class="p-1" href="http://lattes.cnpq.br/3553049694618182"><i class="fas fa-paperclip"></i> Lattes</a></li>
+								</ul><!--//social-list-->
+						    </div><!--//col-->
+				        </div><!--//source-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">		        
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile rounded-circle" src="assets/images/profiles/jordan.jpeg" alt="Jordan">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Jordan Kobellarz, M.Sc</div>
+						        <div class="soure-title">Pesquisador bolsista, UTFPR</div>
+								<ul class="my-1 mx-0 px-0">
+									<li class="list-inline-item"><a class="p-1" href="https://linkedin.com/in/jordankobellarz"><i class="fab fa-linkedin-in"></i></a></li> 
+									<li class="list-inline-item"><a class="p-1" href="http://lattes.cnpq.br/1825304140067755"><i class="fas fa-paperclip"></i> Lattes</a></li>
+								</ul><!--//social-list-->
+						    </div><!--//col-->
+				        </div><!--//source-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile rounded-circle" src="assets/images/profiles/fabio.jpeg" alt="Fábio">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Fábio R. de Souza, M.Sc</div>
+						        <div class="soure-title">Aluno de doutorado, USP</div>
+								<ul class="my-1 mx-0 px-0">
+									<li class="list-inline-item"><a class="p-1" href="https://www.linkedin.com/in/frezendesouza/"><i class="fab fa-linkedin-in"></i></a></li> 
+									<li class="list-inline-item"><a class="p-1" href="http://lattes.cnpq.br/2608694044447480"><i class="fas fa-paperclip"></i> Lattes</a></li>
+								</ul><!--//social-list-->
+						    </div><!--//col-->
+				        </div><!--//source-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile rounded-circle" src="assets/images/profiles/leandro.png" alt="image">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Leandro A Villas, Ph.D</div>
+						        <div class="soure-title">Professor, Unicamp</div>
+								<ul class="my-1 mx-0 px-0">
+									<li class="list-inline-item"><a class="p-1" href="http://lattes.cnpq.br/9830590737740134"><i class="fas fa-paperclip"></i> Lattes</a></li>
+								</ul><!--//social-list-->
+						    </div><!--//col-->
+				        </div><!--//source-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile rounded-circle" src="assets/images/profiles/thiago.png" alt="image">
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Thiago H. Silva, Ph.D</div>
+						        <div class="soure-title">Professor, UTFPR</div>
+								<ul class="my-1 mx-0 px-0">
+									<li class="list-inline-item"><a class="p-1" href="http://lattes.cnpq.br/9568338246493587"><i class="fas fa-paperclip"></i> Lattes</a></li>
+								</ul><!--//social-list-->
+						    </div><!--//col-->
+				        </div><!--//source-->
+				    </div><!--//inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+    
+	<!--
+    <section id="author-section" class="author-section section theme-bg-primary py-5">
+	    <div class="container py-5">
+		    <h2 class="section-heading text-center text-white mb-3">Sobre os autores</h2>
+		    <div class="author-bio single-col-max mx-auto">
+				<p><b>Frances Albert Santos</b> é aluno de doutorado no Instituto de Computação da UNICAMP desde Agosto de 2015, 
+					sob orientação do prof. Dr. Leandro A. Villas e coorientação do Prof. Dr. Thiago H. Silva. Atualmente, Frances 
+					é Gerente de \textit{Machine Learning} na empresa Sinch. Durante o período de Outubro de 2017 à Março de 2018, 
+					Frances esteve no laboratório PARADISE no SITE (School of Information Technology and Engineering) da Universidade 
+					de Ottawa, Canadá, como parte de seu doutorado sanduíche (concessão PDSE-CAPES) sob supervisão do Prof. Dr. Azzedine 
+					Boukerche. Ele também esteve na University of Ontario Institute of Technology, Canadá, como bolsista visitante, 
+					supervisionado pelo Prof. Dr. Richard Pazzi e financiado pelo Governo do Canadá pelo Emerging Leader in the Americas 
+					Program (ELAP) no primeiro semestre de 2017. Ele recebeu em 2016 o título de Mestre em Ciência da Computação pela 
+					UNICAMP. Recebeu o título de Bacharel em Ciência da Computação pela Universidade Estadual de Mato Grosso do Sul 
+					em 2013, tendo trabalhado em soluções na área de reconhecimento de íris em dispositivos móveis</p>
+				<p><b>Leandro Aparecido Villas</b> é Professor Associado I no Instituto de Computação da Universidade Estadual de 
+					Campinas. Ele é bolsista de Produtividade em Pesquisa do CNPq nível 1D, coordenador do (H.IAAC) Hub de Inteligência 
+					Artificial e Arquiteturas Cognitivas da Unicamp e vice-coordenador do (Viva-Bem) Hub de Inteligência Artificial 
+					em Saúde e Bem-estar. Durante os nove anos no Instituto de Computação da UNICAMP, coordenou e/ou coordena projetos 
+					de pesquisa totalizando mais de nove milhões de reais em recursos provenientes de agências de fomento à pesquisa e 
+					do setor privado. Como resultado dos projetos de pesquisa e orientações, é co-autor de 75 artigos em periódicos, 
+					quatro capítulos de livro e 139 artigos completos em conferências. Leandro foi coordenador de Graduação do curso de 
+					Ciência da Computação da Universidade Estadual de Campinas e desde 2019 tem atuado como Diretor Associado do Instituto 
+					de Computação da Universidade Estadual de Campinas. Nesses nove anos como professor do Instituto Computação, ele foi 
+					agraciado com mais de vinte prêmios e reconhecimentos. Recentemente, foi apontado entre os Top 1\% Cientistas mais 
+					influentes do mundo segundo pesquisa conduzida por uma equipe da Universidade de Stanford (EUA). Ele recebeu o prêmio 
+					de Excelência Acadêmica do Instituto de Computação da Universidade Estadual de Campinas em 2015 e 2019. Esse prêmio 
+					é concedido ao Docente do Instituto que apresentou o melhor conjunto de publicações indexadas em revistas no triênio 
+					anterior à concessão. Ele também recebeu o prêmio Latin America Young Professional Award 2016, esse prêmio é concedido 
+					pela IEEE Communications Society para o pesquisador da América Latina que tem demonstrado excelência na área de 
+					comunicação. </p>
+    <p><b>Thiago Henrique Silva</b> é docente no Departamento Acadêmico de Informática da UTFPR, campus Curitiba. Além disso, é docente 
+		no Programa de Pós-graduação em Engenharia Elétrica e Informática Industrial da mesma instituição. Atualmente é bolsista de 
+		produtividade do CNPq (PQ - Nível 2).  De dezembro de 2019 a junho de 2021, foi um professor visitante na University of Toronto, 
+		Canadá. Em 2018 (junho a julho), foi professor visitante na University of Quebec at Montreal, Canadá. Em 2014, recebeu o título 
+		de doutor em Ciência da Computação pela Universidade Federal de Minas Gerais, com doutorado sanduíche na University of Birmingham, 
+		Reino Unido (2012), e no INRIA-Paris, França (2013). Em 2011, foi um pesquisador visitante por seis meses no Future Center da 
+		Telecom Italia, Itália, onde trabalhou com ciência de dados para ambientes inteligentes urbanos. Publicou artigos em veículos de 
+		impacto, como nos periódicos IEEE Wireless Comunications, ACM Computing Surveys e ACM Transactions on Internet Technology em temas 
+		relacionados à mineração de dados em fontes de mídias sociais. Ele é co-editor de uma série de livros da Springer na área de 
+		Computação Urbana. Thiago foi agraciado com os prêmios de melhor trabalho/menção honrosa nos seguintes eventos: Concurso de Teses 
+		e Dissertações da SBC (2015), Semana de Seminários de Teses do DCC-UFMG (2013), IEEE CPSCOM (2012), SBRC (2009, 2010 e 2013), 
+		SBCUP (2012), ERBD (2016), WGRS (2017), CoUrb (2018), WebMedia - Aplicação (2020) e WebMedia - Dissertação (2020), WebMedia - 
+		Iniciação Científica (2021). Teve sua pesquisa divulgada em importantes veículos de comunicação, como na revista MIT Technology 
+		Review. Em 2017, 2018, 2019, 2020, 2021 e 2022 organizou o Workshop de Computação Urbana em conjunto com o SBRC. Em 2019, 2020, 
+		2021 e 2022 organizou o IEEE Workshop on Urban Computing em conjunto com o IEEE-DCOSS. Thiago é/foi membro dos comitês de programa 
+		do VLDB (Workshop on Big Social Data and Urban Computing), LANC 2017 a 2020, WCNC 2017, SCCC 2016 e 2018, IRM 2017,  Webmedia 2015 
+		a 2022, SBBD 2016 a 2022, IHC 2016 a 2018, SBCUP 2017 a 2022 e SBRC 2016 a 2022. Ele também vem revisando trabalhos em importantes 
+		periódicos internacionais como o ACM Transactions on Intelligent Systems and Technology, Elsevier Information Systems, EPJ Data 
+		Science, Elsevier Computer Communications, Springer Applied Network Science, Journal of Transport Geography, Springer Social 
+		Network Analysis and Mining, ACM Transactions on Interactive Intelligent Systems, Applied Geography e Entropy.</p>
+    <p><b>Fábio Rezende de Souza</b> é aluno de doutorado em Linguística Computacional pela FFLCH-USP desde Janeiro de 2022, sob a 
+		orientação do Prof. Dr. Marcello Modesto. Atualmente, trabalha como Analista de Inteligência Artificial Sênior na Empresa Sinch. 
+		Possui Mestrado em Ciência da Computação (2019) (com foco em Inteligência Artificial Aplicada a Processamento de Linguagem Natural),
+		 Bacharelado em Ciência da Computação (2017) e Ciência e Tecnologia (2016) pela Universidade Federal do ABC, com período de 
+		 Graduação Sanduíche na Arizona State University (2014-2015). Têm interesse em pesquisa e aplicações de Aprendizado de Máquina, 
+		 voltadas principalmente à Linguística Computacional, em análise Semântica e Pragmática de conteúdo textual.</p>
+
+    <p><b>Jordan Kaique Kobellarz</b> é pesquisador bolsista pela Fundação de Amparo à Pesquisa do Estado de São Paulo (2020 - atual). 
+		Possui graduação em Sistemas de Informação pela Universidade Tecnológica Federal do Paraná (2017) e mestrado em Computação 
+		Aplicada pela Universidade Tecnológica Federal do Paraná (2021). Atuou em projetos de desenvolvimento web (2012 - 2020) e análise 
+		de dados (2017 - 2020). Tem experiência na área da Computação Aplicada, atuando principalmente em Computação Social, com ênfase 
+		em Mineração de Dados, Redes Complexas e Polarização em Redes Sociais.</p>
+
+
+				<p></p>
+
+				<div class="author-links text-center pt-4">
+				    <ul class="social-list list-unstyled">
+					    <li class="list-inline-item"><a href="https://twitter.com/3rdwave_themes"><i class="fab fa-twitter"></i></a></li>
+					    <li class="list-inline-item"><a href="https://github.com/xriley"><i class="fab fa-github-alt"></i></a></li> 
+			            <li class="list-inline-item"><a href="https://medium.com/@3rdwave_themes"><i class="fab fa-medium-m"></i></a></li>
+			            <li class="list-inline-item"><a href="https://themes.3rdwavemedia.com/"><i class="fas fa-globe-europe"></i></a></li>
+			        </ul>
+			    </div>
+			    
+		    </div>
+		    
+	    </div>
+    </section>
+	-->
+    
+    
+
+    <footer class="footer">
+
+	    <div class="footer-bottom text-center py-5">
+
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+ 
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/plugins/smoothscroll.min.js"></script> 
+    
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html> 
+
